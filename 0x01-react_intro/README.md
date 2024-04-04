@@ -36,7 +36,7 @@ Install create-react-app: Use the create-react-app tool to quickly set up a new 
 ```
 
 # Create a new React project:
-    * Create a new React project by running.
+* Create a new React project by running.
 
 ```
     npx create-react-app my-react-app
