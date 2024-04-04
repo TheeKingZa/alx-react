@@ -1,9 +1,7 @@
-// task_0/dashboard/src/App.js
-
 import React from 'react';
 import './App.css';
 import holbertonLogo from './holberton_logo.jpg'; // Import the Holberton logo image
-import {getFullYear, getFooterCopy } from './utils';
+import { getFullYear, getFooterCopy } from './utils';
 
 function App() {
   return (
