@@ -36,7 +36,7 @@ Install create-react-app: Use the create-react-app tool to quickly set up a new 
 ```
 
 # Create a new React project:
-    * Create a new React project by running.
+* Create a new React project by running.
 
 ```
     npx create-react-app my-react-app
@@ -84,14 +84,31 @@ JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to wri
 ```
 
 # Using the React Developer Tools
-    React Developer Tools is a browser extension available for Chrome and Firefox. It allows you to inspect React component hierarchies in the Chrome Developer Tools or Firefox Developer Tools. You can use it to debug your React applications and view component tree, props, and state.
-
+```
+React Developer Tools is a browser extension available for Chrome and Firefox.
+It allows you to inspect React component hierarchies in the Chrome Developer Tools or Firefox Developer Tools.
+You can use it to debug your React applications and view component tree, props, and state.
+```
 # Using Enzyme's Shadow Rendering for Testing
-    Enzyme is a JavaScript testing utility for React that makes it easier to assert, manipulate, and traverse your React components' output. Shadow rendering in Enzyme refers to rendering components in isolation from the rest of the application, which helps in testing components independently.
+```
+Enzyme is a JavaScript testing utility for React that makes it easier to
+* assert
+* manipulate
+*  and traverse your React components' output.
+
+Shadow rendering in Enzyme refers to rendering components in isolation from the rest of the application,
+which helps in testing components independently.
+```
 
 # Using React with Webpack & Babel
-    When you use create-react-app, it sets up Webpack and Babel for you automatically. Webpack is a module bundler, and Babel is a JavaScript compiler. Together, they allow you to write modern JavaScript code (using ES6/ES7 features) and JSX syntax, which get compiled down to browser-compatible JavaScript.
-
+```
+When you use create-react-app, it sets up Webpack and Babel for you automatically.
+Webpack is a module bundler,
+and Babel is a JavaScript compiler.
+Together, they allow you to write modern
+ JavaScript code (using ES6/ES7 features) and JSX syntax,
+which get compiled down to browser-compatible JavaScript.
+```
 
 
 
