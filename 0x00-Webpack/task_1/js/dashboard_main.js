@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import debounce from 'lodash/debounce';
 import _ from 'lodash';
 
 $(document).ready(function() {
@@ -19,3 +20,15 @@ $(document).ready(function() {
   // Bind debounce function to button click event
   $('button').click(updateCounter);
 });
+
+
+const handleInput = () => {
+  // Function to handle user input
+};
+
+// Create a debounced version of the input handler with a delay of 500ms
+const debouncedInputHandler = debounce(handleInput, 500);
+
+// Attach the debounced input handler to the input element
+document.getElementById('searchInput').addEventListener('input', debouncedInputHandler);
+
