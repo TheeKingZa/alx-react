@@ -1,42 +1,24 @@
-// task_3/dashboard/src/utils.test.js
-
 import { getFullYear, getFooterCopy, getLatestNotification } from './utils';
 
 // Test for getFullYear function
-describe('getFullYear function', () => {
-  test('returns the correct year', () => {
-    // Get the current year
-    const currentYear = new Date().getFullYear();
-    // Call the getFullYear function
-    const year = getFullYear();
-    // Assert that the returned year matches the current year
-    expect(year).toEqual(currentYear);
-  });
+test('getFullYear returns the correct year', () => {
+  const currentYear = new Date().getFullYear();
+  expect(getFullYear()).toBe(currentYear);
 });
 
 // Test for getFooterCopy function
-describe('getFooterCopy function', () => {
-  test('returns "Holberton School" when the argument is true', () => {
-    // Call the getFooterCopy function with true argument
-    const footerText = getFooterCopy(true);
-    // Assert that the returned text is "Holberton School"
-    expect(footerText).toEqual('Holberton School');
-  });
+test('getFooterCopy returns the correct string when argument is true', () => {
+  const expectedString = 'Holberton School';
+  expect(getFooterCopy(true)).toBe(expectedString);
+});
 
-  test('returns "Holberton School main dashboard" when the argument is false', () => {
-    // Call the getFooterCopy function with false argument
-    const footerText = getFooterCopy(false);
-    // Assert that the returned text is "Holberton School main dashboard"
-    expect(footerText).toEqual('Holberton School main dashboard');
-  });
+test('getFooterCopy returns the correct string when argument is false', () => {
+  const expectedString = 'Holberton School main dashboard';
+  expect(getFooterCopy(false)).toBe(expectedString);
 });
 
 // Test for getLatestNotification function
-describe('getLatestNotification function', () => {
-  test('returns the correct string', () => {
-    // Call the getLatestNotification function
-    const notification = getLatestNotification();
-    // Assert that the returned string matches the expected string
-    expect(notification).toEqual('<strong>Urgent requirement</strong> - complete by EOD');
-  });
+test('getLatestNotification returns the correct string', () => {
+  const notification = 'New version of Chrome now available';
+  expect(getLatestNotification()).toBe(notification);
 });

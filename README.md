@@ -1,8 +1,3 @@
-# React
+# alx-react
+Learning React
 
-README.md
----
-
-
----
-[]()
