@@ -1,4 +1,3 @@
-// webpack.config.js
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -17,27 +16,35 @@ module.exports = {
     // Configuration for development server
     devtool: 'inline-source-map',
     devServer: {
-        // Set the content base directory
-        contentBase: './dist',
+        // Set up static file serving
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
         // Enable hot module replacement
-        hot: true,
+        hot: true
     },
     // Module rules for handling different file types
     module: {
         rules: [
             {
-                // Rule for handling CSS files
+                // Rule for handling JavaScript/JSX files
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react']
+                    }
+                }
+            },
+            // Rules for handling CSS files, image files, etc.
+            {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'], // Use style-loader to inject CSS into the DOM and css-loader to handle CSS imports
+                use: ['style-loader', 'css-loader'],
             },
             {
-                // Rule for handling image files
-                test: /\.(png|jpe?g|gif)$/i,
-                use: [
-                    {
-                        loader: 'file-loader', // Use file-loader to handle image imports
-                    },
-                ],
+                test:/\.(png|jpg|jpeg|gif|svg)$/i,
+                type: 'asset/resource',
             },
         ],
     },
