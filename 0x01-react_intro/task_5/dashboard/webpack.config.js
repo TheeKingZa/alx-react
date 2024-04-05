@@ -9,10 +9,10 @@ module.exports = {
     entry: './src/index.js',
     // Output configuration for bundled files
     output: {
-        // Path to the output directory
-        path: path.resolve(__dirname, 'dist'),
         // Name of the bundled JavaScript file
         filename: 'bundle.js',
+        // Path to the output directory
+        path: path.resolve(__dirname, 'dist'),
     },
     // Configuration for development server
     devtool: 'inline-source-map',
