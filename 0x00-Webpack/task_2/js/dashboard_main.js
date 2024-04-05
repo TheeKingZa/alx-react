@@ -1,19 +1,34 @@
 import $ from 'jquery';
+import debounce from 'lodash/debounce';
 import _ from 'lodash';
 
-let count = 0;
+$(document).ready(function() {
+  // Elements to add to the DOM
+  $('<p>').text('Holberton Dashboard').appendTo('body');
+  $('<p>').text('Dashboard data for the students').appendTo('body');
+  $('<button>').text('Click here to get started').appendTo('body');
+  $('<p>').attr('id', 'count').appendTo('body');
+  $('<p>').text('Copyright - Holberton School').appendTo('body');
 
-const updateCounter = _.debounce(() => {
+  // Counter function
+  let count = 0;
+  const updateCounter = _.debounce(function() {
     count++;
     $('#count').text(`${count} clicks on the button`);
-}, 1000);
+  }, 300);
 
-$(document).ready(() => {
-    $('body').append('<p>Holberton Dashboard</p>');
-    $('body').append('<p>Dashboard data for the students</p>');
-    $('body').append('<button id="startBtn">Click here to get started</button>');
-    $('body').append('<p id="count"></p>');
-    $('body').append('<p>Copyright - Holberton School</p>');
-
-    $('#startBtn').on('click', updateCounter);
+  // Bind debounce function to button click event
+  $('button').click(updateCounter);
 });
+
+
+const handleInput = () => {
+  // Function to handle user input
+};
+
+// Create a debounced version of the input handler with a delay of 500ms
+const debouncedInputHandler = debounce(handleInput, 500);
+
+// Attach the debounced input handler to the input element
+document.getElementById('searchInput').addEventListener('input', debouncedInputHandler);
+
