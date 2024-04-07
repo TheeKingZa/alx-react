@@ -4,11 +4,11 @@
 
 `Read` or `watch`:
 
-* [React Official Website]()
-* [Getting started with React]()
-* [React Developer Tools]()
-* [Enzyme]()
-* [React Fragments]()
+* [React Official Website](https://react.dev/)
+* [Getting started with React](https://www.taniarascia.com/getting-started-with-react/)
+* [React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+* [Enzyme](https://enzymejs.github.io/enzyme/docs/api/shallow.html)
+* [React Fragments](https://react.dev/reference/react/Fragment)
 
 ---
 
@@ -37,7 +37,7 @@ You can create basic React components using functions by using ES6 arrow functio
 ```
 ---
 
-[`.`](#react-props)[`^`](#need-to-know)
+[`^`](#need-to-know)
 
 ---
 # Reusing Components:
@@ -61,7 +61,7 @@ Components in React are designed to be reusable. You can reuse a component by im
 ```
 ---
 
-[`.`](#react-props)[`^`](#need-to-know)
+[`^`](#need-to-know)
 
 ---
 # Passing Properties to Components:
@@ -93,7 +93,7 @@ And then you can use it like this:
 ```
 ---
 
-[`.`](#react-props)[`^`](#need-to-know)
+[`^`](#need-to-know)
 
 ---
 # Defining Types for Components:
@@ -116,7 +116,7 @@ You can define types for components using TypeScript or PropTypes. Here's an exa
 ```
 ---
 
-[`.`](#react-props)[`^`](#need-to-know)
+[`^`](#need-to-know)
 
 ---
 # Using Fragments:
@@ -139,7 +139,7 @@ Fragments allow you to return multiple elements without adding extra nodes to th
 ```
 ---
 
-[`.`](#react-props)[`^`](#need-to-know)
+[`^`](#need-to-know)
 
 ---
 # Using Keys to Improve Loop Performance:
