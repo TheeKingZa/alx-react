@@ -1,0 +1,16 @@
+/* Header styles */
+.App-header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+  }
+  
+  .App-logo {
+    height: 40px;
+    pointer-events: none;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  

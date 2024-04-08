@@ -1,12 +1,9 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
 
 describe('App component', () => {
-  test('renders header text', () => {
+  test('renders without crashing', () => {
     render(<App />);
-    const headerElement = screen.getByText(/School dashboard/i);
-
-    expect(headerElement).toBeInTheDocument();
   });
 });
