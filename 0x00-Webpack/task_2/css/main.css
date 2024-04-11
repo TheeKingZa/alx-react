@@ -1,12 +1,29 @@
+/* task_2/css/main.css */
+
+.button {
+  position: relative;
+}
+
+.counter {
+  position: absolute;
+  top: 50%;
+  right: -20px; /* Adjust the value as needed */
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
 #logo {
-    width: 200px;
-    height: 200px;
-    background-image: url('../assets/holberton-logo.jpg');
-    background-size: cover;
-  }
-  
-  .counter-text {
-    font-weight: bold;
-    float: right;
-  }
-  
+  width: 200px;
+  height: 200px;
+  background-image: url('../assets/holberton-logo.jpg');
+  background-size: cover;
+}
+
+th {
+  /* Set background image to holberton-logo.jpg */
+  background-image: url('../assets/holberton-logo.jpg');
+  /* Set width and height of the background image */
+  background-size: 200px 200px;
+  /* Ensure the background image covers the entire element */
+  background-repeat: no-repeat;
+}
