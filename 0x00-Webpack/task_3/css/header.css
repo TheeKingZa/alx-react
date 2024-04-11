@@ -1,0 +1,11 @@
+/* header.css */
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 18px;
+    color: #333;
+}

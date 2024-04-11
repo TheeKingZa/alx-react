@@ -1,15 +1,23 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    mode: 'production',
-    entry: './js/dashboard_main.js',
+    mode: 'development',
+    entry: {
+        header: './js/header.js', // Adjusted entry paths
+        body: './js/body.js',
+        footer: './js/footer.js'
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'public'),
     },
+    devtool: 'inline-source-map', // Enable inline source mapping
     module: {
         rules: [
             {
+                // Loaders for css, images and etc
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
@@ -25,5 +33,16 @@ module.exports = {
                 ],
             },
         ],
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './public/index.html',
+            filename: 'index.html' // Adjusted HtmlWebpackPlugin configuration
+        }),
+        new CleanWebpackPlugin() // Add CleanWebpackPlugin to clean build folders
+    ],
+    devServer: {
+        port: 8564, // Config the devServer to run on port
+        open: false,
     },
 };
