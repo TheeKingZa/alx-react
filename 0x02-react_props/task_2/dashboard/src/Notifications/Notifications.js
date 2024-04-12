@@ -1,39 +1,40 @@
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import Notifications from './Notifications';
-import { getLatestNotification } from './utils/utils';
+import React from "react";
+import "./Notifications.css";
+import closeIcon from "../assets/close-icon.png";
+import { getLatestNotification } from "../utils/utils";
 
-jest.mock('./utils/utils', () => ({
-  getLatestNotification: jest.fn(),
-}));
+function Notifications() {
+  const handleCloseClick = () => {
+    console.log("Close button has been clicked");
+  };
 
-describe('Notifications', () => {
-  beforeEach(() => {
-    getLatestNotification.mockReturnValue('<strong>Hello</strong>');
-  });
+  return (
+    <div className="Notifications">
+      <button
+        style={{
+          color: "#3a3a3a",
+          fontWeight: "bold",
+          background: "none",
+          border: "none",
+          fontSize: "10px",
+          position: "absolute",
+          right: "2px",
+          top: "2px",
+          cursor: "pointer",
+        }}
+        aria-label="Close"
+        onClick={handleCloseClick}
+      >
+        <img src={closeIcon} alt="closeIcon" width="10px" />
+      </button>
+      <p>Here is the list of notifications</p>
+      <ul>
+        <li data-type="default">New course available</li>
+        <li data-type="urgent">New resume available</li>
+        <li data-type="urgent" dangerouslySetInnerHTML={{ __html: getLatestNotification() }}></li>
+      </ul>
+    </div>
+  );
+}
 
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-
-  it('renders correctly', () => {
-    const { getByText, getByAltText } = render(<Notifications />);
-    expect(getByText('Here is the list of notifications')).toBeInTheDocument();
-    expect(getByAltText('Close icon')).toBeInTheDocument();
-    expect(getLatestNotification).toHaveBeenCalledTimes(1);
-  });
-
-  it('calls handleClick function when close button is clicked', () => {
-    const { getByAltText } = render(<Notifications />);
-    const closeButton = getByAltText('Close icon');
-    fireEvent.click(closeButton);
-    expect(console.log).toHaveBeenCalledWith('Close button has been clicked');
-  });
-
-  it('renders list items with correct data attributes and content', () => {
-    const { getByText } = render(<Notifications />);
-    expect(getByText('New course available')).toHaveAttribute('data-priority', 'default');
-    expect(getByText('New resume available')).toHaveAttribute('data-priority', 'urgent');
-    expect(getByText('Hello').innerHTML).toBe('<strong>Hello</strong>');
-  });
-});
+export default Notifications;
