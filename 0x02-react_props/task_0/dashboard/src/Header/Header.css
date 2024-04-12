@@ -1,16 +1,14 @@
-/* Header styles */
+/* Header.css */
 .App-header {
-    background-color: #282c34;
-    padding: 20px;
-    color: white;
+    font-size: 1.4rem;
+    color: #e0354b;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #e0354b;
+    padding-top: 200px;
   }
   
-  .App-logo {
-    height: 40px;
-    pointer-events: none;
+  .App-header img {
+    width: 200px;
+    height: 200px;
   }
-  
-  h1 {
-    margin: 0;
-  }
-  

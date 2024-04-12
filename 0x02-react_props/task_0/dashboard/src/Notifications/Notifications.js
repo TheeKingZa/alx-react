@@ -2,7 +2,7 @@
 
 import React from 'react';
 import closeIcon from '../assets/close-icon.png';
-import { getLatestNotification } from './utils/utils';
+import { getLatestNotification } from '../utils/utils';
 
 function Notifications() {
   const handleClick = () => {

@@ -1,24 +1,22 @@
 import React from 'react';
-import './App.css';
+import Notifications from '../Notifications/Notifications'; // Import Notifications component
+import Header from '../Header/Header'; // Import Header component
+import Login from '../Login/Login'; // Import Login component
+import Footer from '../Footer/Footer'; // Import Footer component
+import './App.css'; // Import CSS file
 import holbertonLogo from '../assets/holberton_logo.jpg'; // Import the Holberton logo image
 import { getFullYear, getFooterCopy } from '../utils/utils';
-import Notifications from '../Notifications';
-import Header from './Header/Header'; // Import Header component
-import Login from './Login/Login'; // Import Login component
-import Footer from './Footer/Footer'; // Import Footer component
 
 function App() {
   return (
-    <React.Fragment>
-      <Notifications /> {/* Render Notifications component */}
     <div className="App">
-      <Header /> {/* Render Header component */}
+      <Notifications /> {/* Add Notifications component */}
+      <Header /> {/* Replace header code with Header component */}
       <div className="App-body">
-        <Login /> {/* Render Login component */}
+        <Login /> {/* Replace login code with Login component */}
       </div>
-      <Footer /> {/* Render Footer component */}
+      <Footer /> {/* Replace footer code with Footer component */}
     </div>
-    </React.Fragment>
   );
 }
 

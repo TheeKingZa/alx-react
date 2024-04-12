@@ -1,9 +1,9 @@
 import React from 'react';
-import './Login.css'; // Import the Login CSS file
+import './Login.css'; // Import CSS file for styling
 
 function Login() {
   return (
-    <div className="login-container">
+    <div className="Login">
       {/* Login content */}
       <p>Login to access the full dashboard</p>
       {/* Email input field */}

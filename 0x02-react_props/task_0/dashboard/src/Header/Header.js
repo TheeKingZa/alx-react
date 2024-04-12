@@ -1,5 +1,6 @@
 import React from 'react';
-import './Header.css'; // Import the Header CSS file
+import holbertonLogo from '../../src/assets/holberton_logo.jpg'; // Import the Holberton logo image
+import './Header.css'; // Import CSS file for styling
 
 function Header() {
   return (
