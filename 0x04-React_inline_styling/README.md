@@ -124,6 +124,16 @@ You can create animations using CSS animations or JavaScript libraries like anim
 ```
 
 This animation moves a box horizontally back and forth. You can adjust the properties to create different effects.
+---
+
+# install Aphrodite
+    * Install Aphrodite using npm with:
+
+```
+    npm install --save aphrodite
+
+```
+
 
 ---
 
