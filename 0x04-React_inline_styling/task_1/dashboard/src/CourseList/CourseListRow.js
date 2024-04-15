@@ -2,7 +2,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-/* 0-inline styling */
 const rowStyle = {
   backgroundColor: "#f5f5f5ab",
 };

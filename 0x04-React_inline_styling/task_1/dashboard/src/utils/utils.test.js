@@ -1,7 +1,7 @@
-/*utils.test*/
+/* utils.test.js */
 import { getFullYear, getFooterCopy, getLatestNotification } from "./utils";
 
-test("return current year", () => {
+test("returns current year", () => {
   expect(getFullYear()).toBe(2024);
 });
 
