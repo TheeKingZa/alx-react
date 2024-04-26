@@ -1,4 +1,4 @@
-/* 0-fromjs.js*/
+/* 0-fromjs.js */
 // Importing the `fromJS` function from the 'immutable' library.
 // `fromJS` is used to convert a plain JavaScript object into an Immutable.js data structure.
 import { fromJS } from 'immutable';
