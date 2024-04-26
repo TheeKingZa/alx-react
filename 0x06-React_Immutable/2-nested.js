@@ -1,3 +1,5 @@
+Import { getIn } from 'immutable';
+
 export default function accessImmutableObject(object, array) {
     // Start with the original object
     let result = object;
