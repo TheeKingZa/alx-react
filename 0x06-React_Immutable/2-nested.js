@@ -1,21 +1,26 @@
-Import { getIn } from 'immutable';
+import { getIn } from 'immutable';
 
+/**
+ * Recursively accesses nested elements in an immutable object based on the provided array of keys.
+ * @param {Object} object - The immutable object to access.
+ * @param {Array} array - An array containing a list of keys forming a path in the object.
+ * @returns {undefined|string|Map} - The value of the object at the defined path, undefined if not found.
+ */
 export default function accessImmutableObject(object, array) {
-    // Start with the original object
-    let result = object;
+  // Get the first key from the array
+  const key = array.shift();
   
-    // Traverse the object using the keys in the array
-    for (let key of array) {
-      // If the current key exists in the object, update the result with the value
-      if (result && typeof result === 'object' && key in result) {
-        result = result[key];
-      } else {
-        // If any key is not found, return undefined
-        return undefined;
-      }
-    }
-  
-    // Return the final result
-    return result;
+  // If the key is undefined, return the object
+  if (key === undefined) {
+    return object;
   }
-  
+
+  // If the object does not contain the key, return undefined
+  if (!object.has(key)) {
+    return undefined;
+  }
+
+  // Recursively call the function with the nested object and the remaining array of keys
+  return accessImmutableObject(getIn(object, [key]), array);
+}
+
